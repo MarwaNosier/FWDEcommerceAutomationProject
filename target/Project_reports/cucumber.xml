@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="270.131">
+    <testcase classname="Register || User could register with new account" name="User could register with valid data" time="13.864">
+        <system-out><![CDATA[Given user navigates to register page.......................................passed
+When user choose Gender.....................................................passed
+And user enter valid first name.............................................passed
+And user enter valid last name..............................................passed
+And user select valid Date of birth.........................................passed
+And user enter valid email address..........................................passed
+And user enter valid password...............................................passed
+And user enter again the same valid password................................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Register || User could register with new account" name="User register with email already exists" time="11.646">
+        <system-out><![CDATA[Given user navigates to register page.......................................passed
+When user choose Gender.....................................................passed
+And user enter valid first name.............................................passed
+And user enter valid last name..............................................passed
+And user select valid Date of birth.........................................passed
+And user enter exit email address...........................................passed
+And user enter valid password...............................................passed
+And user enter again the same valid password................................passed
+And user clicks on register button..........................................passed
+Then error message is displayed.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users should be able to login to the system" name="user login with valid email and password" time="13.057">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user enter "test862000@gmail.com" and "password123"....................passed
+And user click on login button..............................................passed
+Then user could login successfully and go to home Page......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users should be able to login to the system" name="user login with invalid username and password" time="10.195">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user enter "invalidemail" and "invaildpass!"...........................passed
+And user click on login button..............................................passed
+Then user could not login successfully......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User Reset Password" name="User could reset his password successfully" time="10.94">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user click on Forgot password..........................................passed
+And user enter his email....................................................passed
+And user click on Recover button............................................passed
+Then Message Email with instructions has been sent to user is displayed.....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User Reset Password" name="User could not reset his password successfully" time="11.449">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user click on Forgot password..........................................passed
+And user enter error email..................................................passed
+And user click on Recover button............................................passed
+Then Red Message Email not found is displayed...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could switch between currencies US-Euro" name="User changes the currency from USD to Euro" time="10.416">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User select Euro from drop down list...................................passed
+Then Currency of product is changed into Euro...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Users can search for any product using product name or using SKU" name="User can search using product name" time="9.834">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User search using product name "book"..................................passed
+And User click on Search button.............................................passed
+Then Products that appears will be related to the product name "book".......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Users can search for any product using product name or using SKU" name="User can search for product using sku" time="14.184">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User search with product sku "SCI_FAITH"...............................passed
+And User click on Search button.............................................passed
+Then Products that appears will be related to the product sku "SCI_FAITH"...passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User can hover on one of main categories then click on sub category" name="User select subcategory" time="13.375">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User hover on main categories then click on sub categories.............passed
+Then User will be navigated to a page  of subCategory that he selected......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could open followUs links" name="User opens facebook link" time="16.198">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on Facebook icon............................................passed
+Then New tab will be opened with this URL "https://www.facebook.com/nopCommerce".passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could open followUs links" name="User opens twitter link" time="12.617">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on Twitter icon.............................................passed
+Then New tab will be opened with this URL "https://twitter.com/nopCommerce".passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could open followUs links" name="User opens RSS link" time="12.711">
+        <failure message="invalid session id&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [7c7bebc597f076cbcf286d44f7605dd9, switchToWindow {handle=CDwindow-18AC553C050532F69A263F3E6255F6DC}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55749/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 7c7bebc597f076cbcf286d44f7605dd9" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[Given User redirects to Home page...........................................passed
+When User click on RSS icon.................................................passed
+Then New tab will be opened with this URL "https://demo.nopcommerce.com/news/rss/1".failed
+
+StackTrace:
+org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7c7bebc597f076cbcf286d44f7605dd9, switchToWindow {handle=CDwindow-18AC553C050532F69A263F3E6255F6DC}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55749}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55749/devtoo..., se:cdpVersion: 108.0.5359.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 7c7bebc597f076cbcf286d44f7605dd9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1028)
+	at StepDefinition.followUsStepDefinition.openedURL(followUsStepDefinition.java:45)
+	at ✽.New tab will be opened with this URL "https://demo.nopcommerce.com/news/rss/1"(file:///E:/fwd/FWDEcommerceAutomationProject/src/main/resources/Features/F07_followUs.feature:17)
+]]></failure>
+    </testcase>
+    <testcase classname="User could open followUs links" name="User opens youtube link" time="19.081">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on Youtube icon.............................................passed
+Then New tab will be opened with this URL "https://www.youtube.com/user/nopCommerce".passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User can add products to Wishlist" name="User add HTC phone to Wishlist" time="10.026">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on add to wishlist button of HTC phone......................passed
+Then Green success message will be displayed................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User can add products to Wishlist" name="User add HTC product to Wishlist and validate its quantity" time="14.356">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on add to wishlist button of HTC phone......................passed
+And User click on Wishlist tab..............................................passed
+Then User will be navigated to wishlist page................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could add different products to Shopping cart" name="User add HTC phone to Shopping cart" time="9.323">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on add to cart button of HTC phone..........................passed
+Then A success message will be displayed....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could add different products to Shopping cart" name="User remove HTC phone from Shopping cart after adding" time="15.637">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User click on add to cart button of HTC phone..........................passed
+And User click on Shopping cart tab.........................................passed
+And User remove product.....................................................passed
+Then Verify that product remove successfully................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could filter with color" name="user could filter products using color" time="12.48">
+        <system-out><![CDATA[Given User redirects to Home page...........................................passed
+When User hover on main categories then click on sub categories.............passed
+And user select color option................................................passed
+Then Only products have this color is appeared..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could Create successful Order" name="Create successful Order" time="28.153">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user enter "test862000@gmail.com" and "password123"....................passed
+And user click on login button..............................................passed
+When User redirects to Home page............................................passed
+When User click on add to cart button of HTC phone..........................passed
+And User click on Shopping cart tab.........................................passed
+And User agree with the terms of service....................................passed
+And user click on checkout..................................................passed
+And User fill Billing address form..........................................passed
+And User click on continue button in Billing................................passed
+And User click on continue button in Shipping method........................passed
+And User click on continue button in Payment method.........................passed
+And User click on continue button in Payment information....................passed
+And User click on confirm...................................................passed
+Then Message is displayed...................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
